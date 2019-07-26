@@ -106,8 +106,8 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.body}>{this.renderRows.call(this)}</View>
         <Score score={this.state.score} />
+        <View style={styles.body}>{this.renderRows.call(this)}</View>
         <Button onPress={this.resetCards} title="Reset" color="#008CFA" />
       </View>
     );
@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   body: {
-    flex: 18,
+    flex: 15,
     justifyContent: "space-between",
     padding: 10,
     marginTop: 20
