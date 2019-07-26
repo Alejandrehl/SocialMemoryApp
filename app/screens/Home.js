@@ -1,17 +1,40 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
+import { Button } from "react-native-elements";
+import Score from "../components/Score";
+import Card from "../components/Card";
 
 const Home = ({ navigation }) => {
   return (
-    <View style={styles.viewBody}>
-      <Text>Home Screen</Text>
+    <View style={styles.container}>
+      <View style={styles.body}>
+        <Text>RENDER DE CELDAS</Text>
+      </View>
+      <Score score={0} />
+      <Button
+        onPress={() => console.log("PRess")}
+        title="Reset"
+        color="#008CFA"
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  viewBody: {
-    flex: 1
+  container: {
+    flex: 1,
+    alignSelf: "stretch",
+    backgroundColor: "#fff"
+  },
+  row: {
+    flex: 1,
+    flexDirection: "row"
+  },
+  body: {
+    flex: 18,
+    justifyContent: "space-between",
+    padding: 10,
+    marginTop: 20
   }
 });
 
