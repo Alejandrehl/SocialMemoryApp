@@ -13,6 +13,10 @@ const GameState = props => {
   };
   const [state, dispatch] = useReducer(gameReducer, initialState);
 
+  const clickCard = id => {
+    console.log(id);
+  };
+
   const resetCards = () => {
     console.log("RESET CARDS");
   };
@@ -24,7 +28,8 @@ const GameState = props => {
         selected_pairs: state.selected_pairs,
         score: state.score,
         cards: state.cards,
-        resetCards
+        resetCards,
+        clickCard
       }}
     >
       {props.children}

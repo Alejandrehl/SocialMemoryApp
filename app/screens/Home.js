@@ -11,13 +11,15 @@ import helpers from "../utils/helpers";
 
 const Home = ({ navigation }) => {
   const gameContext = useContext(GameContext);
-  const {
-    current_selection,
-    selected_pairs,
-    score,
-    cards,
-    resetCards
-  } = gameContext;
+  const { score, cards, resetCards, clickCard } = gameContext;
+
+  const sources = {
+    fontawesome: FontAwesome,
+    entypo: Entypo,
+    ionicons: Ionicons
+  };
+
+  const clone = JSON.parse(JSON.stringify(cards));
 
   const getRowContents = cards => {
     let contents_r = [];
@@ -45,7 +47,7 @@ const Home = ({ navigation }) => {
           name={card.name}
           color={card.color}
           is_open={card.is_open}
-          clickCard={() => console.log("CLICKEANDO CARD")}
+          clickCard={() => clickCard(index)}
         />
       );
     });
