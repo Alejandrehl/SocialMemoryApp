@@ -22,7 +22,7 @@ const RootStack = createBottomTabNavigator(
     Home: {
       screen: HomeStack,
       navigationOptions: ({ navigation }) => ({
-        tabBarLabel: "Inicio",
+        tabBarLabel: "Home",
         tabBarIcon: ({ tintColor }) => (
           <Icon
             name="home-outline"
@@ -39,7 +39,7 @@ const RootStack = createBottomTabNavigator(
     order: ["Home"],
     tabBarOptions: {
       inactiveTintColor: "#646464",
-      activeTintColor: "#ffc107"
+      activeTintColor: "#000"
     }
   }
 );
