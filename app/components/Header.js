@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 const Header = () => {
   return (
     <View style={styles.header}>
-      <Text style={styles.header_text}>MemoryGame</Text>
+      <Text style={styles.headerText}>Social Apps Memory</Text>
     </View>
   );
 };
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
     backgroundColor: "#f3f3f3"
   },
-  header_text: {
+  headerText: {
     fontWeight: "bold",
     fontSize: 17,
     textAlign: "center"
