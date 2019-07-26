@@ -2,13 +2,14 @@ import React, { useReducer } from "react";
 import GameContext from "./gameContext";
 import gameReducer from "./gameReducer";
 import {} from "../types";
+import cards from "../../utils/cards";
 
 const GameState = props => {
   const initialState = {
     current_selection: [],
     selected_pairs: [],
     score: 0,
-    cards: null
+    cards: cards
   };
   const [state, dispatch] = useReducer(gameReducer, initialState);
 
