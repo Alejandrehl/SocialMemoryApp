@@ -1,9 +1,11 @@
 import React from "react";
-import { StyleSheet, View, Text, ScrollView } from "react-native";
 import { Button } from "react-native-elements";
+import { StyleSheet, View, Text, ScrollView } from "react-native";
 import { Ionicons, FontAwesome, Entypo } from "@expo/vector-icons";
+
 import Score from "../components/Score";
 import Card from "../components/Card";
+
 import helpers from "../utils/helpers";
 
 const Home = ({ navigation }) => {
