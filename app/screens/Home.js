@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "react-native-elements";
 import { StyleSheet, View, Text, ScrollView } from "react-native";
 import { Ionicons, FontAwesome, Entypo } from "@expo/vector-icons";
@@ -6,15 +6,19 @@ import { Ionicons, FontAwesome, Entypo } from "@expo/vector-icons";
 import Score from "../components/Score";
 import Card from "../components/Card";
 
+import GameContext from "../context/game/gameContext";
 import helpers from "../utils/helpers";
 
 const Home = ({ navigation }) => {
+  const gameContext = useContext(GameContext);
+  const { current_selection, selected_pairs, score, cards } = gameContext;
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.body}>
         <Text>RENDER DE CELDAS</Text>
       </View>
-      <Score score={0} />
+      <Score score={score} />
       <Button
         onPress={() => console.log("PRess")}
         title="Reset"
