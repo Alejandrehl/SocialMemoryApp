@@ -1,12 +1,12 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ScrollView } from "react-native";
 import { Button } from "react-native-elements";
 import Score from "../components/Score";
 import Card from "../components/Card";
 
 const Home = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.body}>
         <Text>RENDER DE CELDAS</Text>
       </View>
@@ -16,7 +16,7 @@ const Home = ({ navigation }) => {
         title="Reset"
         color="#008CFA"
       />
-    </View>
+    </ScrollView>
   );
 };
 
