@@ -1,12 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Button } from "react-native";
-import { Ionicons, FontAwesome, Entypo } from "@expo/vector-icons";
-
-import Header from "./app/components/Header";
-import Score from "./app/components/Score";
-import Card from "./app/components/Card";
-
-import helpers from "./app/utils/helpers";
+import { StyleSheet, View } from "react-native";
 import Navigator from "./app/navigation/MainNavigator";
 
 const App = () => {
