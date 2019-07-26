@@ -1,16 +1,16 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const Score = () => {
+const Score = ({ score }) => {
   return (
-    <View style={styles.score_container}>
-      <Text style={styles.score}>{this.props.score}</Text>
+    <View style={styles.scoreContainer}>
+      <Text style={styles.score}>{score}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  score_container: {
+  scoreContainer: {
     flex: 1,
     alignItems: "center",
     padding: 10

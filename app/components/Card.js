@@ -1,22 +1,22 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableHighlight } from "react-native";
+import { StyleSheet, View, TouchableHighlight } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
-const Card = () => {
+const Card = ({ is_open, src, name, color, clickCard }) => {
   let CardSource = FontAwesome;
   let icon_name = "question-circle";
   let icon_color = "#393939";
 
-  if (this.props.is_open) {
-    CardSource = this.props.src;
-    icon_name = this.props.name;
-    icon_color = this.props.color;
+  if (is_open) {
+    CardSource = src;
+    icon_name = name;
+    icon_color = color;
   }
 
   return (
     <View style={styles.card}>
       <TouchableHighlight
-        onPress={this.props.clickCard}
+        onPress={clickCard}
         activeOpacity={0.75}
         underlayColor={"#f1f1f1"}
       >
