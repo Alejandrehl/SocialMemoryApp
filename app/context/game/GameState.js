@@ -13,13 +13,18 @@ const GameState = props => {
   };
   const [state, dispatch] = useReducer(gameReducer, initialState);
 
+  const resetCards = () => {
+    console.log("RESET CARDS");
+  };
+
   return (
     <GameContext.Provider
       value={{
         current_selection: state.current_selection,
         selected_pairs: state.selected_pairs,
         score: state.score,
-        cards: state.cards
+        cards: state.cards,
+        resetCards
       }}
     >
       {props.children}
