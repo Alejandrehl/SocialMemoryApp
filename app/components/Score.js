@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
   scoreContainer: {
     flex: 1,
     alignItems: "center",
-    padding: 10
+    padding: 10,
+    marginTop: 20
   },
   score: {
     fontSize: 30,
